@@ -36,11 +36,8 @@ jobs:
             password: ${{ secrets.DOCKER_PASSWORD }}
         - name: Build et push de l'image Docker
           uses: docker/build-push-action@v2
-            with:
-              context: .
-              push: true
-              tags: bbmt10/weather:latest
-
-        
-
+          with:
+            context: .
+            push: true
+            tags: bbmt10/weather:latest
 
