@@ -1,16 +1,16 @@
 name: Workflow push
 on: 
     push: 
-        jobs: 
-            tests-unitaires:
-                runs-on: windows-latest
-                steps: 
-                    - name: Récupération du repo
-                    uses: actions/checkout@v2
-                    - name: Récupération de nodejs
-                    uses: actions/setup-node@v2
-                    with: 
-                        node-version: '16'
-                    run: npm install
-                    run: npm test
-                    run: npm run cover
+jobs: 
+    tests-unitaires:
+        runs-on: windows-latest
+        steps: 
+            - name: Récupération du repo
+            uses: actions/checkout@v2
+            - name: Récupération de nodejs
+            uses: actions/setup-node@v2
+            with: 
+                node-version: '16'
+            run: npm install
+            run: npm test
+            run: npm run cover
