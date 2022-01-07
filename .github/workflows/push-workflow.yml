@@ -3,7 +3,7 @@ on:
     push: 
 jobs: 
     tests-unitaires:
-        runs-on: windows-latest
+        runs-on: ubuntu-latest
         steps: 
             - name: Récupération du repo
             uses: actions/checkout@v2
